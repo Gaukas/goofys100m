@@ -15,7 +15,7 @@
 package internal
 
 import (
-	. "github.com/kahing/goofys/api/common"
+	. "github.com/Gaukas/goofys100m/api/common"
 
 	"io"
 	"runtime"

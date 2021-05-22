@@ -1,4 +1,4 @@
-module github.com/kahing/goofys
+module github.com/Gaukas/goofys100m
 
 go 1.14
 
@@ -22,7 +22,6 @@ require (
 	github.com/kylelemons/godebug v1.1.0 // indirect
 	github.com/mattn/go-ieproxy v0.0.0-20190805055040-f9202b1cfdeb // indirect
 	github.com/mitchellh/go-homedir v1.1.0
-	github.com/pkg/errors v0.9.1 // indirect
 	github.com/satori/go.uuid v1.2.1-0.20181028125025-b2ce2384e17b
 	github.com/sevlyar/go-daemon v0.1.5
 	github.com/shirou/gopsutil v0.0.0-20190731134726-d80c43f9c984

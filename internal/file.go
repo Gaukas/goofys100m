@@ -66,8 +66,8 @@ type FileHandle struct {
 	keepPageCache bool // the same value we returned to OpenFile
 }
 
-const MAX_READAHEAD = uint32(400 * 1024 * 1024)
-const READAHEAD_CHUNK = uint32(20 * 1024 * 1024)
+const MAX_READAHEAD = uint32(2000 * 1024 * 1024)
+const READAHEAD_CHUNK = uint32(100 * 1024 * 1024)
 
 // NewFileHandle returns a new file handle for the given `inode` triggered by fuse
 // operation with the given `opMetadata`
@@ -382,7 +382,7 @@ func (fh *FileHandle) readFromReadAhead(offset uint64, buf []byte) (bytesRead in
 		if err != nil {
 			if err == io.EOF && readAheadBuf.size != 0 {
 				// in case we hit
-				// https://github.com/kahing/goofys/issues/464
+				// https://github.com/Gaukas/goofys100m/issues/464
 				// again, this will convert that into
 				// an error
 				fuseLog.Errorf("got EOF when data remains: %v", *fh.inode.FullName())
